@@ -7,7 +7,7 @@ $white: #fff;
 $grey: rgb(128, 128, 128);
 $teal: rgb(0, 156, 161);
 $black: #000;
-$box-height: 50%;
+$box-height: 150px;
 
 body {
   background-color: $background-color;
@@ -15,10 +15,9 @@ body {
 }
 
 .box {
-  border: 1px solid $white;
+  border: 50px solid $white;
+  border-left: 0;
   height: $box-height;
-
-
 }
 
 .grey {
