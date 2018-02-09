@@ -12,3 +12,27 @@ $(() => {
 
 // use require without a reference to ensure a file is bundled
 // require('./example')
+
+const game = {
+  board: ['', '', '', '', '', '', '', '', ''],
+  playerOne: {
+    id: '',
+    piece: ['x', 'x', 'x', 'x', 'o', 'o', 'o', 'o', 'o']
+  },
+  playerTwo: {
+    id: '',
+    piece: ['x', 'x', 'x', 'x', 'o', 'o', 'o', 'o', 'o']
+  }
+}
+
+const switchPlayer = function () {
+  const piece = this.piece
+  prevent.Default()
+  for (i = 0; i < piece.length; i++) {
+    if (game.playerOne[i] === 'x') {
+      console.log('you are X')
+    } else {
+      console.log('you are O')
+    }
+  }
+}
