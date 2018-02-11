@@ -1,7 +1,7 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
-$background-color: #4e4e4e;
+$background-color: #269926;
 $font-color: #dfdfdf;
 $white: #fff;
 $grey: rgb(128, 128, 128);
@@ -14,6 +14,47 @@ body {
   color: $font-color;
 }
 
+td {
+  border: 5px solid $black;
+  height: 100px;
+  width: 100px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 70px;
+  cursor: pointer;
+  border-top: 0;
+  border-left: 0;
+}
+
+table {
+  position: absolute;
+  left: 50%;
+  margin-left: -155px;
+  top: 50px;
+}
+
+.bottom-row {
+  border-bottom: 0;
+}
+
+.right-col {
+  border-right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 .box1 {
   border: 1px solid $white;
   border-bottom: 0;
@@ -46,3 +87,4 @@ body {
 .teal {
   background-color: black;
 }
+*/
