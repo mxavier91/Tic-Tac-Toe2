@@ -1,6 +1,7 @@
 let origBoard
-const playerOne = 'X'
-const playerTwo = 'O'
+const playerOne = 'O'
+const playerTwo = 'X'
+const tokens = ['X', 'O', 'X', 'O', 'X', 'O', 'X']
 const winCombos = [
   [0, 1, 2],
   [3, 4, 5],
@@ -11,19 +12,39 @@ const winCombos = [
   [0, 4, 8],
   [6, 4, 2]
 ]
-
+/*
+const turnClick = function () {
+  for (let i = 0; i < 10; i++) {
+    if (i % 2 === 0) {
+      cells[i].innerText = 'X'
+    } else {
+      cells[i].innerText = 'O'
+    }
+  }
+}
+*/
 const cells = $('.cell')
 
 const startGame = function () {
   origBoard = Array.from(Array(9).keys())
   for (let i = 0; i < cells.length; i++) {
     cells[i].innerText = ''
-    cells[i].addEventListner('click', turnClick)
   }
 }
+startGame()
 
 const turnClick = function (square) {
-  console.log(square.target.id)
+  turn(square.target.id)
+}
+
+const turn = function (squareId) {
+  for (let i = 0; i < tokens.length; i++) {
+    if (tokens[i] === 'X') {
+      document.getElementById(squareId).innerText = playerOne
+    } else {
+      document.getElementById(squareId).innerText = playerTwo
+    }
+  }
 }
 
 module.exports = {
