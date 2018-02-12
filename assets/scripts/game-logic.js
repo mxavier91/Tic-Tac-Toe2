@@ -12,17 +12,7 @@ const winCombos = [
   [0, 4, 8],
   [6, 4, 2]
 ]
-/*
-const turnClick = function () {
-  for (let i = 0; i < 10; i++) {
-    if (i % 2 === 0) {
-      cells[i].innerText = 'X'
-    } else {
-      cells[i].innerText = 'O'
-    }
-  }
-}
-*/
+
 const cells = $('.cell')
 
 const startGame = function () {
