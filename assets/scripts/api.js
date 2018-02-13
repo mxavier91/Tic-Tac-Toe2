@@ -4,7 +4,7 @@ const store = require('./store')
 const signUp = function (data) {
   console.log(data)
   return $.ajax({
-    url: config.apiOrigin + '/sign-up',
+    url: config.apiOrigins.production + '/sign-up',
     method: 'POST',
     headers: {
       contentType: 'application/json'
@@ -15,7 +15,7 @@ const signUp = function (data) {
 
 const signIn = function (data) {
   return $.ajax({
-    url: config.apiOrigin + '/sign-in',
+    url: config.apiOrigins.production + '/sign-in',
     method: 'POST',
     headers: {
       contentType: 'application/json'
@@ -23,8 +23,31 @@ const signIn = function (data) {
     data: data
   })
 }
+const changePassword = function (data) {
+  return $.ajax({
+    url: config.apiOrigins.production + '/change-password/' + store.user.id,
+    method: 'PATCH',
+    headers: {
+      contentType: 'application/json',
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
+const signOut = function (data) {
+  return $.ajax({
+    url: config.apiOrigins.production + '/sign-out/' + store.user.id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
 
 module.exports = {
   signUp,
-  signIn
+  signIn,
+  changePassword,
+  signOut
 }

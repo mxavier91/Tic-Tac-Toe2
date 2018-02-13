@@ -14,6 +14,7 @@ const winCombos = [
 const cells = $('.cell')
 
 const startGame = function () {
+  document.querySelector('table').style.display = 'block'
   origBoard = Array.from(Array(9).keys())
 }
 
