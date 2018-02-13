@@ -11,34 +11,29 @@ const winCombos = [
   [6, 4, 2]
 ]
 
+origBoard = Array.from(Array(9).keys())
+
 const cells = $('.cell')
 
+for (let i = 0; i < cells.length; i++) {
+  cells[i].innerText = ''
+}
+
 origBoard = Array.from(Array(9).keys())
+
+const turn = event.target.id
 
 const turnClick = function () {
   for (let i = 0; i < 10; i++) {
     if (currentPlayer === 1) {
       currentPlayer = 2
-      return console.log('X')
+      return $('#cells').show()
     } else {
       currentPlayer = 1
-      return console.log('O')
+      return
     }
   }
 }
-
-/*
-const cells = $('.cell')
-
-const startGame = function () {
-  origBoard = Array.from(Array(9).keys())
-  for (let i = 0; i < cells.length; i++) {
-    cells[i].innerText = ''
-  }
-}
-
-startGame()
-*/
 
 module.exports = {
   turnClick
