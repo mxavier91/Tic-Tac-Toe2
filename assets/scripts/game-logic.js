@@ -11,6 +11,10 @@ const winCombos = [
   [6, 4, 2]
 ]
 
+const cells = $('.cell')
+
+origBoard = Array.from(Array(9).keys())
+
 const turnClick = function () {
   for (let i = 0; i < 10; i++) {
     if (currentPlayer === 1) {
