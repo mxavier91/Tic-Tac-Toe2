@@ -1,7 +1,5 @@
 let origBoard
-const playerOne = 'O'
-const playerTwo = 'X'
-const tokens = ['X', 'O', 'X', 'O', 'X', 'O', 'X']
+let currentPlayer = 1
 const winCombos = [
   [0, 1, 2],
   [3, 4, 5],
@@ -21,18 +19,17 @@ const startGame = function () {
     cells[i].innerText = ''
   }
 }
+
 startGame()
 
-const turnClick = function (square) {
-  turn(square.target.id)
-}
-
-const turn = function (squareId) {
-  for (let i = 0; i < tokens.length; i++) {
-    if (tokens[i] === 'X') {
-      document.getElementById(squareId).innerText = playerOne
+const turnClick = function () {
+  for (let i = 0; i < 10; i++) {
+    if (currentPlayer === 1) {
+      currentPlayer = 2
+      return console.log('X')
     } else {
-      document.getElementById(squareId).innerText = playerTwo
+      currentPlayer = 1
+      return console.log('O')
     }
   }
 }
