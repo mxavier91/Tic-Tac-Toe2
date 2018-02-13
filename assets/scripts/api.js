@@ -13,6 +13,18 @@ const signUp = function (data) {
   })
 }
 
+const signIn = function (data) {
+  return $.ajax({
+    url: config.apiOrigin + '/sign-in',
+    method: 'POST',
+    headers: {
+      contentType: 'application/json'
+    },
+    data: data
+  })
+}
+
 module.exports = {
-  signUp
+  signUp,
+  signIn
 }
