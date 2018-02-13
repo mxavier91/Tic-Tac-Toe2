@@ -4,11 +4,7 @@ const store = require('./store')
 const signUp = function (data) {
   console.log(data)
   return $.ajax({
-<<<<<<< HEAD
     url: config.apiOrigins.production + '/sign-up',
-=======
-    url: config.apiOrigin + '/sign-up',
->>>>>>> gameLogic
     method: 'POST',
     headers: {
       contentType: 'application/json'
@@ -17,7 +13,6 @@ const signUp = function (data) {
   })
 }
 
-<<<<<<< HEAD
 const signIn = function (data) {
   return $.ajax({
     url: config.apiOrigins.production + '/sign-in',
@@ -55,8 +50,4 @@ module.exports = {
   signIn,
   changePassword,
   signOut
-=======
-module.exports = {
-  signUp
->>>>>>> gameLogic
 }

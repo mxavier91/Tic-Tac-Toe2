@@ -10,10 +10,7 @@ const onSignUp = function (event) {
   api.signUp(data)
     .then(ui.signUpSuccess)
     .catch(ui.signUpFailure)
-<<<<<<< HEAD
   document.getElementById('#sign-up').reset()
-=======
->>>>>>> gameLogic
 }
 const onSignIn = function (event) {
   event.preventDefault()
@@ -22,7 +19,6 @@ const onSignIn = function (event) {
   api.signIn(data)
     .then(ui.signInSuccess)
     .catch(ui.signInFailure)
-<<<<<<< HEAD
   document.querySelector('table').style.display = 'block'
   document.querySelector('#sign-in').style.display = 'none'
   document.querySelector('#sign-up').style.display = 'none'
@@ -48,18 +44,13 @@ const onChangePassword = function (event) {
   api.changePassword(data)
     .then(ui.changeSuccess)
     .catch(ui.changeFailure)
-=======
->>>>>>> gameLogic
 }
 
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
-<<<<<<< HEAD
   $('#delete').on('submit', onSignOut)
   $('#change-password').on('submit', onChangePassword)
-=======
->>>>>>> gameLogic
 }
 
 module.exports = {

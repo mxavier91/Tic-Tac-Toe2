@@ -1,35 +1,22 @@
-<<<<<<< HEAD
 const store = require('./store')
 
-=======
->>>>>>> gameLogic
 const signUpSuccess = function (data) {
   $('#message').text('Signed up Successfully')
   $('#message').css('background-color', 'green')
   console.log(data)
 }
 
-<<<<<<< HEAD
 const signUpFailure = function (error) {
   $('#message').text('Signed up Successfully')
   $('#message').css('background-color', 'red')
   console.log(error)
-=======
-const signUpFailure = function (data) {
-  $('#message').text('Signed up Successfully')
-  $('#message').css('background-color', 'red')
-  console.log(data)
->>>>>>> gameLogic
 }
 
 const signInSuccess = function (data) {
   $('#message').text('Signed in Successfully')
   $('#message').css('background-color', 'blue')
   console.log(data)
-<<<<<<< HEAD
   store.user = data.user
-=======
->>>>>>> gameLogic
 }
 
 const signInFailure = function (data) {
@@ -38,7 +25,6 @@ const signInFailure = function (data) {
   console.log(data)
 }
 
-<<<<<<< HEAD
 const changeSuccess = function () {
   $('#message').text('Changed Password Successfully')
   $('#message').css('background-color', 'green')
@@ -63,19 +49,13 @@ const deleteFailure = function (error) {
   console.log(error)
 }
 
-=======
->>>>>>> gameLogic
 module.exports = {
   signUpSuccess,
   signUpFailure,
   signInSuccess,
-<<<<<<< HEAD
   signInFailure,
   changeSuccess,
   changeFailure,
   deleteSuccess,
   deleteFailure
-=======
-  signInFailure
->>>>>>> gameLogic
 }
