@@ -10,14 +10,9 @@ const onSignUp = function (event) {
   api.signUp(data)
     .then(ui.signUpSuccess)
     .catch(ui.signUpFailure)
-<<<<<<< HEAD
-<<<<<<< HEAD
-  document.getElementById('#sign-up').reset()
-=======
->>>>>>> gameboard
-=======
->>>>>>> game-ui
+  document.querySelector('#sign-up').style.display = 'none'
 }
+
 const onSignIn = function (event) {
   event.preventDefault()
   const data = getFormFields(this)
@@ -30,7 +25,6 @@ const onSignIn = function (event) {
   document.querySelector('#sign-up').style.display = 'none'
   document.querySelector('#delete').style.display = 'block'
   document.querySelector('#change-password').style.display = 'block'
-  document.getElementById('sign-in').value = ''
 }
 
 const onSignOut = function () {
@@ -43,14 +37,7 @@ const onSignOut = function () {
   document.querySelector('#sign-in').style.display = 'block'
   document.querySelector('#sign-up').style.display = 'block'
   document.querySelector('#delete').style.display = 'none'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   document.querySelector('#change-password').style.display = 'none'
->>>>>>> gameboard
-=======
-  document.querySelector('#change-password').style.display = 'none'
->>>>>>> game-ui
 }
 
 const onChangePassword = function (event) {
