@@ -13,9 +13,9 @@ const winCombos = [
 
 const cells = $('.cell')
 
-const startGame = function () {
-  origBoard = Array.from(Array(9).keys())
-}
+origBoard = Array.from(Array(9).keys())
+
+
 
 startGame()
 
