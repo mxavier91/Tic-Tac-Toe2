@@ -20,6 +20,7 @@ const onSignIn = function (event) {
   api.signIn(data)
     .then(ui.signInSuccess)
     .catch(ui.signInFailure)
+  $('#sign-in').val('')
   document.querySelector('table').style.display = 'block'
   document.querySelector('#sign-in').style.display = 'none'
   document.querySelector('#sign-up').style.display = 'none'
