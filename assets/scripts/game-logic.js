@@ -21,16 +21,14 @@ for (let i = 0; i < cells.length; i++) {
 
 origBoard = Array.from(Array(9).keys())
 
-const turn = event.target.id
-
 const turnClick = function () {
   for (let i = 0; i < 10; i++) {
     if (currentPlayer === 1) {
       currentPlayer = 2
-      return $('#cells').show()
+      return console.log('O')
     } else {
       currentPlayer = 1
-      return
+      return console.log('X')
     }
   }
 }
