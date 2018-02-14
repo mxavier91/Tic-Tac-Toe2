@@ -22,10 +22,16 @@ const winCombos = [
 const cells = $('.cell')
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const startGame = function () {
   document.querySelector('table').style.display = 'block'
   origBoard = Array.from(Array(9).keys())
 }
+=======
+origBoard = Array.from(Array(9).keys())
+
+
+>>>>>>> gameboard
 
 startGame()
 

@@ -10,7 +10,10 @@ const onSignUp = function (event) {
   api.signUp(data)
     .then(ui.signUpSuccess)
     .catch(ui.signUpFailure)
+<<<<<<< HEAD
   document.getElementById('#sign-up').reset()
+=======
+>>>>>>> gameboard
 }
 const onSignIn = function (event) {
   event.preventDefault()
@@ -36,6 +39,10 @@ const onSignOut = function () {
   document.querySelector('#sign-in').style.display = 'block'
   document.querySelector('#sign-up').style.display = 'block'
   document.querySelector('#delete').style.display = 'none'
+<<<<<<< HEAD
+=======
+  document.querySelector('#change-password').style.display = 'none'
+>>>>>>> gameboard
 }
 
 const onChangePassword = function (event) {
