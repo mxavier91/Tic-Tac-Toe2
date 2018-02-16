@@ -20,13 +20,13 @@ const cells = $('.cell')
 for (let i = 0; i < cells.length; i++) {
   cells[i].innerText = ''
 }
-
+/*
 const isValid = $('#' + event.target.id).is(':empty')
    if (!isValid) {
 
      return
    }
-
+*/
 origBoard = Array.from(Array(9).keys())
 
 const turnClick = function (event) {
