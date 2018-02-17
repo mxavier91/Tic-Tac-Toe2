@@ -12,6 +12,7 @@ const onSignUp = function (event) {
     .catch(ui.signUpFailure)
 }
 const onSignIn = function (event) {
+  console.log(this)
   event.preventDefault()
   const data = getFormFields(this)
   console.log('data is ', data)
@@ -39,6 +40,7 @@ const onSignOut = function () {
 }
 
 const onChangePassword = function (event) {
+  console.log(event.target)
   event.preventDefault()
   const data = getFormFields(event.target)
   api.changePassword(data)
@@ -46,11 +48,20 @@ const onChangePassword = function (event) {
     .catch(ui.changeFailure)
 }
 
+const onNewGame = function () {
+  console.log('this is working')
+  console.log(this)
+  console.log(event.target)
+  event.preventDefault()
+  const data = getFormFields(event.target)
+}
+
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
   $('#delete').on('submit', onSignOut)
   $('#change-password').on('submit', onChangePassword)
+  $('#new-game').on('submit', onNewGame)
 }
 
 module.exports = {
