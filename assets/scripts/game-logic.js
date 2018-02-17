@@ -12,14 +12,6 @@ const winCombos = [
   [0, 4, 8],
   [6, 4, 2]
 ]
-
-origBoard = Array.from(Array(9).keys())
-
-const cells = $('.cell')
-
-for (let i = 0; i < cells.length; i++) {
-  cells[i].innerText = ''
-}
 /*
 const isValid = $('#' + event.target.id).is(':empty')
    if (!isValid) {
