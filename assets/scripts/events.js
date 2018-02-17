@@ -23,7 +23,6 @@ const onSignIn = function (event) {
   document.querySelector('#sign-up').style.display = 'none'
   document.querySelector('#delete').style.display = 'block'
   document.querySelector('#change-password').style.display = 'block'
-  document.getElementById('sign-in').value = ''
 }
 
 const onSignOut = function () {

@@ -20,7 +20,7 @@ const signIn = function (data) {
     headers: {
       contentType: 'application/json'
     },
-    data: data
+    data
   })
 }
 const changePassword = function (data) {

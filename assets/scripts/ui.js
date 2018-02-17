@@ -7,7 +7,7 @@ const signUpSuccess = function (data) {
 }
 
 const signUpFailure = function (error) {
-  $('#message').text('Signed up Successfully')
+  $('#message').text('Signed up Failed')
   $('#message').css('background-color', 'red')
   console.log(error)
 }
@@ -20,7 +20,7 @@ const signInSuccess = function (data) {
 }
 
 const signInFailure = function (data) {
-  $('#message').text('Signed in Successfully')
+  $('#message').text('Signed in Failure')
   $('#message').css('background-color', 'yellow')
   console.log(data)
 }
