@@ -1,5 +1,7 @@
 let origBoard
-let currentPlayer = 1
+const currentPlayerX = 'X'
+const currentPlayerO = 'O'
+let currentPlayer = currentPlayerX
 const winCombos = [
   [0, 1, 2],
   [3, 4, 5],
@@ -11,37 +13,34 @@ const winCombos = [
   [6, 4, 2]
 ]
 
+origBoard = Array.from(Array(9).keys())
+
 const cells = $('.cell')
 
 for (let i = 0; i < cells.length; i++) {
   cells[i].innerText = ''
 }
+/*
+const isValid = $('#' + event.target.id).is(':empty')
+   if (!isValid) {
+
+     return
+   }
+   */
 
 origBoard = Array.from(Array(9).keys())
 
-const turnClick = function () {
-  for (let i = 0; i < 10; i++) {
-    if (currentPlayer === 1) {
-      currentPlayer = 2
-      return console.log('X')
-    } else {
-      currentPlayer = 1
-      return console.log('O')
-    }
+const turnClick = function (event) {
+  if (currentPlayer === currentPlayerX) {
+    currentPlayer = currentPlayerO
+    $('#' + event.target.id).html(currentPlayerX)
+    return console.log(event.target.id)
+  } else {
+    currentPlayer = currentPlayerX
+    $('#' + event.target.id).html(currentPlayerO)
+    return console.log(event.target.id)
   }
 }
-/*
-const cells = $('.cell')
-
-const startGame = function () {
-  origBoard = Array.from(Array(9).keys())
-  for (let i = 0; i < cells.length; i++) {
-    cells[i].innerText = ''
-  }
-}
-
-startGame()
-*/
 
 module.exports = {
   turnClick

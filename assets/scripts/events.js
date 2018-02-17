@@ -10,7 +10,6 @@ const onSignUp = function (event) {
   api.signUp(data)
     .then(ui.signUpSuccess)
     .catch(ui.signUpFailure)
-  document.querySelector('#sign-up').style.display = 'none'
 }
 
 const onSignIn = function (event) {
