@@ -12,10 +12,11 @@ $(() => {
 
 // use require without a reference to ensure a file is bundled
 // require('./example'
+
 const authEvents = require('./events')
 const logic = require('./game-logic')
 
 $(() => {
-  $('.cell').on('submit', logic.turnClick)
+  $('.cell').click(logic.switchPlayer)
   authEvents.addHandlers()
 })

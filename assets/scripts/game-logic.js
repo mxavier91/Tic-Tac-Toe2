@@ -2,15 +2,10 @@ let origBoard
 const currentPlayerX = 'X'
 const currentPlayerO = 'O'
 let currentPlayer = currentPlayerX
-const winCombos = [
-  [0, 1, 2],
-  [3, 4, 5],
-  [6, 7, 8],
-  [0, 3, 6],
-  [1, 4, 7],
-  [2, 5, 8],
-  [0, 4, 8],
-  [6, 4, 2]
+const grid = [
+  [' ', ' ', ' '],
+  [' ', ' ', ' '],
+  [' ', ' ', ' ']
 ]
 /*
 const isValid = $('#' + event.target.id).is(':empty')
@@ -19,9 +14,7 @@ const isValid = $('#' + event.target.id).is(':empty')
      return
    }
    */
-
-origBoard = Array.from(Array(9).keys())
-
+/*
 const turnClick = function (event) {
   if (currentPlayer === currentPlayerX) {
     currentPlayer = currentPlayerO
@@ -33,7 +26,33 @@ const turnClick = function (event) {
     return console.log(event.target.id)
   }
 }
+*/
+
+/*
+const turnClick = function () {
+  const $this = $(this)
+  $this.html(currentPlayerX)
+  const x = $this.data('x')
+  const y = $this.data('y')
+  grid[x][y] = currentPlayerX
+  console.log(grid)
+}
+*/
+let playerOne = 'X'
+
+const switchPlayer = function (event) {
+  if (playerOne === 'X') {
+    document.getElementById(event.target.id).innerHTML = 'X'
+    playerOne = 'O'
+  } else {
+    document.getElementById(event.target.id).innerHTML = 'O'
+    playerOne = 'X'
+  }
+  console.log(grid)
+}
+
+
 
 module.exports = {
-  turnClick
+  switchPlayer
 }

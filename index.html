@@ -12,6 +12,8 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body class="container-fluid">
+
+
 <h1>Tic-Tac-Toe</h1>
 <h3>X-O-X-O-X-O</h3>
 
@@ -52,25 +54,32 @@
         </fieldset>
       </form>
 
+      <form id="new-game" class="border">
+        <fieldset>
+          <legend>New Game</legend>
+          <input type="submit" value="New Game!">
+        </fieldset>
+      </form>
 
 
-      <table>
+
+      <table class="gameboard">
         <tr>
-          <td class="cell" id="zero">0</td>
-          <td class="cell" id="one">1</td>
-          <td class="cell right-col" id="two">2</td>
+          <td class="cell" id="zero" data-x= 0 data-y=0></td>
+          <td class="cell" id="one" data-x= 0 data-y=1></td>
+          <td class="cell right-col" id="two" data-x= 0 data-y=2></td>
         </tr>
 
         <tr>
-          <td class="cell" id="three">3</td>
-          <td class="cell" id="four">4</td>
-          <td class="cell right-col" id="five">5</td>
+          <td class="cell" id="three" data-x= 1 data-y=0></td>
+          <td class="cell" id="four" data-x= 1 data-y=1></td>
+          <td class="cell right-col" id="five" data-x= 1 data-y=2></td>
         </tr>
 
         <tr>
-          <td class="cell bottom-row" id="six">6</td>
-          <td class="cell bottom-row" id="seven">7</td>
-          <td class="cell bottom-row right-col" id="eight">8</td>
+          <td class="cell bottom-row" id="six" data-x= 2 data-y=0></td>
+          <td class="cell bottom-row" id="seven" data-x= 2 data-y=1></td>
+          <td class="cell bottom-row right-col" id="eight" data-x= 2 data-y=2></td>
         </tr>
       </table>
 

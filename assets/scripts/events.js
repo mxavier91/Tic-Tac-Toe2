@@ -1,6 +1,7 @@
 const getFormFields = require('../../lib/get-form-fields')
 const api = require('./api')
 const ui = require('./ui')
+const logic = require('./game-logic')
 
 const onSignUp = function (event) {
   console.log(this)
@@ -48,11 +49,20 @@ const onChangePassword = function (event) {
     .catch(ui.changeFailure)
 }
 
+const onNewGame = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  api.newGame(data)
+    .then(ui.newGameSuccess)
+    .catch(ui.newGameFailure)
+}
+
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
   $('#delete').on('submit', onSignOut)
   $('#change-password').on('submit', onChangePassword)
+  $('#new-game').on('submit', onNewGame)
 }
 
 module.exports = {

@@ -1,4 +1,5 @@
 const store = require('./store')
+const logic = require('./game-logic')
 
 const signUpSuccess = function (data) {
   $('#message').text('Signed up Successfully')
@@ -49,6 +50,18 @@ const deleteFailure = function (error) {
   console.log(error)
 }
 
+const newGameSuccess = function () {
+  $('#message').text('Signed out Successfully')
+  $('#message').css('background-color', 'green')
+  console.log('Sign Out Successfully')
+}
+
+const newGameFailure = function () {
+  $('#message').text('Signed out Successfully')
+  $('#message').css('background-color', 'green')
+  console.log('Sign Out Successfully')
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -57,5 +70,7 @@ module.exports = {
   changeSuccess,
   changeFailure,
   deleteSuccess,
-  deleteFailure
+  deleteFailure,
+  newGameSuccess,
+  newGameFailure
 }
