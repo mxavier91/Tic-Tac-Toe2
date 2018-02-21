@@ -1,58 +1,77 @@
-let origBoard
 const currentPlayerX = 'X'
 const currentPlayerO = 'O'
 let currentPlayer = currentPlayerX
-const grid = [
-  [' ', ' ', ' '],
-  [' ', ' ', ' '],
-  [' ', ' ', ' ']
+const gameBoard = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
+const winCombos = [
+  [0, 1, 2],
+  [3, 4, 5],
+  [6, 7, 8],
+  [0, 3, 6],
+  [1, 4, 7],
+  [2, 5, 8],
+  [0, 4, 8],
+  [2, 4, 6]
 ]
-/*
-const isValid = $('#' + event.target.id).is(':empty')
-   if (!isValid) {
-
-     return
-   }
-   */
-/*
-const turnClick = function (event) {
-  if (currentPlayer === currentPlayerX) {
-    currentPlayer = currentPlayerO
-    $('#' + event.target.id).html(currentPlayerX)
-    return console.log(event.target.id)
-  } else {
-    currentPlayer = currentPlayerX
-    $('#' + event.target.id).html(currentPlayerO)
-    return console.log(event.target.id)
-  }
-}
-*/
-
-/*
-const turnClick = function () {
-  const $this = $(this)
-  $this.html(currentPlayerX)
-  const x = $this.data('x')
-  const y = $this.data('y')
-  grid[x][y] = currentPlayerX
-  console.log(grid)
-}
-*/
-let playerOne = 'X'
 
 const switchPlayer = function (event) {
-  if (playerOne === 'X') {
+  if (currentPlayer === 'X') {
     document.getElementById(event.target.id).innerHTML = 'X'
-    playerOne = 'O'
+    currentPlayer = currentPlayerO
   } else {
     document.getElementById(event.target.id).innerHTML = 'O'
-    playerOne = 'X'
+    currentPlayer = currentPlayerX
   }
-  console.log(grid)
 }
 
+const pushToken = function (event) {
+  if (currentPlayer === 'X') {
+    gameBoard[event.target.id] = 'X'
+  } else {
+    gameBoard[event.target.id] = 'O'
+  }
+  console.log(gameBoard)
+}
 
+const winConditions = function () {
+  if (gameBoard[0] === 'X' && gameBoard[1] === 'X' && gameBoard[2] === 'X') {
+    console.log('X is the WINNER!!!!!')
+  } else if (gameBoard[3] === 'X' && gameBoard[4] === 'X' && gameBoard[5] === 'X') {
+    console.log('X is the WINNER!!!!!')
+  } else if (gameBoard[6] === 'X' && gameBoard[7] === 'X' && gameBoard[8] === 'X') {
+    console.log('X is the WINNER!!!!')
+  } else if (gameBoard[0] === 'X' && gameBoard[3] === 'X' && gameBoard[6] === 'X') {
+    console.log('X is the WINNER!!!!!')
+  } else if (gameBoard[1] === 'X' && gameBoard[4] === 'X' && gameBoard === 'X') {
+    console.log('X is the WINNER!!!!')
+  } else if (gameBoard[2] === 'X' && gameBoard[5] === 'X' && gameBoard[8] === 'X') {
+    console.log('X is the WINNER!!!!')
+  } else if (gameBoard[0] === 'X' && gameBoard[4] === 'X' && gameBoard[8] === 'X') {
+    console.log('X is the WINNER!!!!')
+  } else if (gameBoard[2] === 'X' && gameBoard[4] === 'X' && gameBoard[6] === 'X') {
+    console.log('X is the WINNER!!!!')
+  } else if (gameBoard[0] === 'O' && gameBoard[1] === 'O' && gameBoard[2] === 'O') {
+    console.log('O is the WINNER!!!!!')
+  } else if (gameBoard[3] === 'O' && gameBoard[4] === 'O' && gameBoard[5] === 'O') {
+    console.log('O is the WINNER!!!!!')
+  } else if (gameBoard[6] === 'O' && gameBoard[7] === 'O' && gameBoard[8] === 'O') {
+    console.log('O is the WINNER!!!!')
+  } else if (gameBoard[0] === 'O' && gameBoard[3] === 'O' && gameBoard[6] === 'O') {
+    console.log('O is the WINNER!!!!!')
+  } else if (gameBoard[1] === 'O' && gameBoard[4] === 'O' && gameBoard === 'O') {
+    console.log('O is the WINNER!!!!')
+  } else if (gameBoard[2] === 'O' && gameBoard[5] === 'O' && gameBoard[8] === 'O') {
+    console.log('O is the WINNER!!!!')
+  } else if (gameBoard[0] === 'O' && gameBoard[4] === 'O' && gameBoard[8] === 'O') {
+    console.log('O is the WINNER!!!!')
+  } else if (gameBoard[2] === 'O' && gameBoard[4] === 'O' && gameBoard[6] === 'O') {
+    console.log('O is the WINNER!!!!')
+  }
+}
+
+win
 
 module.exports = {
-  switchPlayer
+  switchPlayer,
+  pushToken,
+  winConditions
 }
