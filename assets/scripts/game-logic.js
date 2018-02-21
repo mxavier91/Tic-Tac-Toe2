@@ -1,7 +1,7 @@
-let origBoard
 const currentPlayerX = 'X'
 const currentPlayerO = 'O'
 let currentPlayer = currentPlayerX
+const gameBoard = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
 const winCombos = [
   [0, 1, 2],
   [3, 4, 5],
@@ -10,37 +10,66 @@ const winCombos = [
   [1, 4, 7],
   [2, 5, 8],
   [0, 4, 8],
-  [6, 4, 2]
+  [2, 4, 6]
 ]
 
-origBoard = Array.from(Array(9).keys())
-
-const cells = $('.cell')
-
-for (let i = 0; i < cells.length; i++) {
-  cells[i].innerText = ''
-}
-/*
-const isValid = $('#' + event.target.id).is(':empty')
-   if (!isValid) {
-
-     return
-   }
-*/
-origBoard = Array.from(Array(9).keys())
-
-const turnClick = function (event) {
-  if (currentPlayer === currentPlayerX) {
+const switchPlayer = function (event) {
+  if (currentPlayer === 'X') {
+    document.getElementById(event.target.id).innerHTML = 'X'
     currentPlayer = currentPlayerO
-    $('#' + event.target.id).html(currentPlayerX)
-    return console.log(event.target.id)
   } else {
+    document.getElementById(event.target.id).innerHTML = 'O'
     currentPlayer = currentPlayerX
-    $('#' + event.target.id).html(currentPlayerO)
-    return console.log(event.target.id)
+  }
+}
+
+const pushToken = function (event) {
+  if (currentPlayer === 'X') {
+    gameBoard[event.target.id] = 'X'
+  } else {
+    gameBoard[event.target.id] = 'O'
+  }
+  console.log(gameBoard)
+}
+
+const winConditions = function () {
+  if (gameBoard[0] === 'X' && gameBoard[1] === 'X' && gameBoard[2] === 'X') {
+    console.log('X is the WINNER!!!!!')
+  } else if (gameBoard[3] === 'X' && gameBoard[4] === 'X' && gameBoard[5] === 'X') {
+    console.log('X is the WINNER!!!!!')
+  } else if (gameBoard[6] === 'X' && gameBoard[7] === 'X' && gameBoard[8] === 'X') {
+    console.log('X is the WINNER!!!!')
+  } else if (gameBoard[0] === 'X' && gameBoard[3] === 'X' && gameBoard[6] === 'X') {
+    console.log('X is the WINNER!!!!!')
+  } else if (gameBoard[1] === 'X' && gameBoard[4] === 'X' && gameBoard === 'X') {
+    console.log('X is the WINNER!!!!')
+  } else if (gameBoard[2] === 'X' && gameBoard[5] === 'X' && gameBoard[8] === 'X') {
+    console.log('X is the WINNER!!!!')
+  } else if (gameBoard[0] === 'X' && gameBoard[4] === 'X' && gameBoard[8] === 'X') {
+    console.log('X is the WINNER!!!!')
+  } else if (gameBoard[2] === 'X' && gameBoard[4] === 'X' && gameBoard[6] === 'X') {
+    console.log('X is the WINNER!!!!')
+  } else if (gameBoard[0] === 'O' && gameBoard[1] === 'O' && gameBoard[2] === 'O') {
+    console.log('O is the WINNER!!!!!')
+  } else if (gameBoard[3] === 'O' && gameBoard[4] === 'O' && gameBoard[5] === 'O') {
+    console.log('O is the WINNER!!!!!')
+  } else if (gameBoard[6] === 'O' && gameBoard[7] === 'O' && gameBoard[8] === 'O') {
+    console.log('O is the WINNER!!!!')
+  } else if (gameBoard[0] === 'O' && gameBoard[3] === 'O' && gameBoard[6] === 'O') {
+    console.log('O is the WINNER!!!!!')
+  } else if (gameBoard[1] === 'O' && gameBoard[4] === 'O' && gameBoard === 'O') {
+    console.log('O is the WINNER!!!!')
+  } else if (gameBoard[2] === 'O' && gameBoard[5] === 'O' && gameBoard[8] === 'O') {
+    console.log('O is the WINNER!!!!')
+  } else if (gameBoard[0] === 'O' && gameBoard[4] === 'O' && gameBoard[8] === 'O') {
+    console.log('O is the WINNER!!!!')
+  } else if (gameBoard[2] === 'O' && gameBoard[4] === 'O' && gameBoard[6] === 'O') {
+    console.log('O is the WINNER!!!!')
   }
 }
 
 module.exports = {
-  turnClick
+  switchPlayer,
+  pushToken,
+  winConditions
 }

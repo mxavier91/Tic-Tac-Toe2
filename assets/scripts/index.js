@@ -15,5 +15,6 @@ $(() => {
 const logic = require('./game-logic.js')
 
 $(() => {
-  $('.cell').click(logic.turnClick)
+  $('.cell').on('click', logic.switchPlayer)
+  $('.cell').on('click', logic.pushToken)
 })
