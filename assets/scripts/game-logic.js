@@ -68,8 +68,6 @@ const winConditions = function () {
   }
 }
 
-win
-
 module.exports = {
   switchPlayer,
   pushToken,
