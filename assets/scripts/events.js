@@ -50,10 +50,10 @@ const onChangePassword = function (event) {
 
 const onNewGame = function () {
   console.log('this is working')
-  console.log(this)
   console.log(event.target)
   event.preventDefault()
   const data = getFormFields(event.target)
+  console.log(data)
 }
 
 const addHandlers = () => {
