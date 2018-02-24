@@ -49,6 +49,17 @@ const deleteFailure = function (error) {
   console.log(error)
 }
 
+const newGameCreated = function (data) {
+  $('#message').text('Let\'s do this!!!!!')
+  $('#message').css('background-color', 'blue')
+  console.log(data)
+}
+
+const newGameFailed = function (data) {
+  $('#message').text('Hold up one sec')
+  $('#message').css('background-color', 'red')
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -57,5 +68,7 @@ module.exports = {
   changeSuccess,
   changeFailure,
   deleteSuccess,
-  deleteFailure
+  deleteFailure,
+  newGameCreated,
+  newGameFailed
 }

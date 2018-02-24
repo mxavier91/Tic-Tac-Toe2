@@ -48,11 +48,13 @@ const onChangePassword = function (event) {
     .catch(ui.changeFailure)
 }
 
-const onNewGame = function () {
+const onNewGame = function (event) {
   console.log('this is working')
   console.log(event.target)
   event.preventDefault()
   const data = getFormFields(event.target)
+  api.newGame(data)
+    .then(ui.newGameCreated)
   console.log(data)
 }
 
