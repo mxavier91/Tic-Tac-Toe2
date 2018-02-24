@@ -17,14 +17,9 @@ const authEvents = require('./events')
 const logic = require('./game-logic')
 
 $(() => {
-<<<<<<< HEAD
-  $('.cell').on('click', logic.pushToken)
-  $('.cell').on('click', logic.switchPlayer)
-  authEvents.addHandlers()
-=======
   $('.cell').on('click', logic.switchPlayer)
   $('.cell').on('click', logic.pushToken)
   $('.cell').on('click', logic.spotTaken)
   $('.cell').on('click', logic.winConditions)
->>>>>>> gameLogic
+  authEvents.addHandlers()
 })

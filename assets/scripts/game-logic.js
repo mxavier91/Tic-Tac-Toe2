@@ -14,59 +14,26 @@ const winCombos = [
 ]
 
 const switchPlayer = function (event) {
-<<<<<<< HEAD
-  if (currentPlayer === 'X') {
-    document.getElementById(event.target.id).innerHTML = 'X'
-    currentPlayer = currentPlayerO
-  } else {
-=======
   if (currentPlayer === 'X' && gameBoard[event.target.id] === ' ') {
     document.getElementById(event.target.id).innerHTML = 'X'
     currentPlayer = currentPlayerO
   } else if (currentPlayer === 'O' && gameBoard[event.target.id] === ' ') {
->>>>>>> gameLogic
     document.getElementById(event.target.id).innerHTML = 'O'
     currentPlayer = currentPlayerX
   }
 }
 
 const pushToken = function (event) {
-<<<<<<< HEAD
-  if (currentPlayer === 'X') {
-    gameBoard[event.target.id] = 'X'
-  } else {
-=======
   if (currentPlayer === 'O') {
     gameBoard[event.target.id] = 'X'
   } else if (currentPlayer === 'X') {
->>>>>>> gameLogic
     gameBoard[event.target.id] = 'O'
   }
   console.log(gameBoard)
 }
 
 const winConditions = function () {
-<<<<<<< HEAD
-  if (gameBoard[0] === 'X' && gameBoard[1] === 'X' && gameBoard[2] === 'X') {
-    console.log('X is the WINNER!!!!!')
-  } else if (gameBoard[3] === 'X' && gameBoard[4] === 'X' && gameBoard[5] === 'X') {
-    console.log('X is the WINNER!!!!!')
-  } else if (gameBoard[6] === 'X' && gameBoard[7] === 'X' && gameBoard[8] === 'X') {
-    console.log('X is the WINNER!!!!')
-  } else if (gameBoard[0] === 'X' && gameBoard[3] === 'X' && gameBoard[6] === 'X') {
-    console.log('X is the WINNER!!!!!')
-  } else if (gameBoard[1] === 'X' && gameBoard[4] === 'X' && gameBoard === 'X') {
-    console.log('X is the WINNER!!!!')
-  } else if (gameBoard[2] === 'X' && gameBoard[5] === 'X' && gameBoard[8] === 'X') {
-    console.log('X is the WINNER!!!!')
-  } else if (gameBoard[0] === 'X' && gameBoard[4] === 'X' && gameBoard[8] === 'X') {
-    console.log('X is the WINNER!!!!')
-  } else if (gameBoard[2] === 'X' && gameBoard[4] === 'X' && gameBoard[6] === 'X') {
-    console.log('X is the WINNER!!!!')
-  } else if (gameBoard[0] === 'O' && gameBoard[1] === 'O' && gameBoard[2] === 'O') {
-=======
   if (gameBoard[0] === 'O' && gameBoard[1] === 'O' && gameBoard[2] === 'O') {
->>>>>>> gameLogic
     console.log('O is the WINNER!!!!!')
   } else if (gameBoard[3] === 'O' && gameBoard[4] === 'O' && gameBoard[5] === 'O') {
     console.log('O is the WINNER!!!!!')
@@ -82,8 +49,6 @@ const winConditions = function () {
     console.log('O is the WINNER!!!!')
   } else if (gameBoard[2] === 'O' && gameBoard[4] === 'O' && gameBoard[6] === 'O') {
     console.log('O is the WINNER!!!!')
-<<<<<<< HEAD
-=======
   } else if (gameBoard[0] === 'X' && gameBoard[1] === 'X' && gameBoard[2] === 'X') {
     console.log('X is the WINNER!!!!!')
   } else if (gameBoard[3] === 'X' && gameBoard[4] === 'X' && gameBoard[5] === 'X') {
@@ -102,7 +67,6 @@ const winConditions = function () {
     console.log('X is the WINNER!!!!')
   } else {
     console.log('We have a DRAW')
->>>>>>> gameLogic
   }
 }
 
