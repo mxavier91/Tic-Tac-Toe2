@@ -8,7 +8,11 @@ const signUpSuccess = function (data) {
 }
 
 const signUpFailure = function (error) {
+<<<<<<< HEAD
   $('#message').text('Signed up Failure')
+=======
+  $('#message').text('Signed up Failed')
+>>>>>>> game-ui
   $('#message').css('background-color', 'red')
   console.log(error)
 }
@@ -21,7 +25,11 @@ const signInSuccess = function (data) {
 }
 
 const signInFailure = function (data) {
+<<<<<<< HEAD
   $('#message').text('Signed in Error')
+=======
+  $('#message').text('Signed in Failure')
+>>>>>>> game-ui
   $('#message').css('background-color', 'yellow')
   console.log(data)
 }
@@ -50,6 +58,7 @@ const deleteFailure = function (error) {
   console.log(error)
 }
 
+<<<<<<< HEAD
 const newGameSuccess = function () {
   $('#message').text('Signed out Successfully')
   $('#message').css('background-color', 'green')
@@ -60,6 +69,17 @@ const newGameFailure = function () {
   $('#message').text('Signed out Successfully')
   $('#message').css('background-color', 'green')
   console.log('Sign Out Successfully')
+=======
+const newGameCreated = function (data) {
+  $('#message').text('Let\'s do this!!!!!')
+  $('#message').css('background-color', 'blue')
+  console.log(data)
+}
+
+const newGameFailed = function (data) {
+  $('#message').text('Hold up one sec')
+  $('#message').css('background-color', 'red')
+>>>>>>> game-ui
 }
 
 module.exports = {
@@ -71,6 +91,11 @@ module.exports = {
   changeFailure,
   deleteSuccess,
   deleteFailure,
+<<<<<<< HEAD
   newGameSuccess,
   newGameFailure
+=======
+  newGameCreated,
+  newGameFailed
+>>>>>>> game-ui
 }

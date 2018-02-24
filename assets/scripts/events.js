@@ -14,6 +14,7 @@ const onSignUp = function (event) {
 }
 
 const onSignIn = function (event) {
+  console.log(this)
   event.preventDefault()
   const data = getFormFields(this)
   console.log('data is ', data)
@@ -42,6 +43,7 @@ const onSignOut = function () {
 }
 
 const onChangePassword = function (event) {
+  console.log(event.target)
   event.preventDefault()
   const data = getFormFields(event.target)
   api.changePassword(data)
@@ -50,11 +52,21 @@ const onChangePassword = function (event) {
 }
 
 const onNewGame = function (event) {
+<<<<<<< HEAD
   event.preventDefault()
   const data = getFormFields(event.target)
   api.newGame(data)
     .then(ui.newGameSuccess)
     .catch(ui.newGameFailure)
+=======
+  console.log('this is working')
+  console.log(event.target)
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  api.newGame(data)
+    .then(ui.newGameCreated)
+  console.log(data)
+>>>>>>> game-ui
 }
 
 const addHandlers = () => {

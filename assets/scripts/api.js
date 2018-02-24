@@ -20,7 +20,7 @@ const signIn = function (data) {
     headers: {
       contentType: 'application/json'
     },
-    data: data
+    data
   })
 }
 const changePassword = function (data) {
@@ -45,6 +45,7 @@ const signOut = function (data) {
   })
 }
 
+<<<<<<< HEAD
 const newGame = function (data) {
   return $.ajax({
     url: config.apiOrigin + '/games/',
@@ -53,6 +54,16 @@ const newGame = function (data) {
       contentType: 'application/json'
     },
     data
+=======
+const newGame = function () {
+  return $.ajax({
+    url: config.apiOrigin + '/games',
+    method: 'POST',
+    headers: {
+      contentType: 'application/json',
+      Authorization: 'Token token=' + store.user.token
+    }
+>>>>>>> game-ui
   })
 }
 
