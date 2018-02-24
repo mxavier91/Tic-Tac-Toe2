@@ -45,16 +45,6 @@ const signOut = function (data) {
   })
 }
 
-<<<<<<< HEAD
-const newGame = function (data) {
-  return $.ajax({
-    url: config.apiOrigin + '/games/',
-    method: 'POST',
-    headers: {
-      contentType: 'application/json'
-    },
-    data
-=======
 const newGame = function () {
   return $.ajax({
     url: config.apiOrigin + '/games',
@@ -63,7 +53,6 @@ const newGame = function () {
       contentType: 'application/json',
       Authorization: 'Token token=' + store.user.token
     }
->>>>>>> game-ui
   })
 }
 
