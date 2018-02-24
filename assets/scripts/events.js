@@ -55,7 +55,16 @@ const onNewGame = function (event) {
   const data = getFormFields(event.target)
   api.newGame(data)
     .then(ui.newGameCreated)
-  console.log(data)
+    .catch(ui.newGameFailed)
+  console.log(this.cellIndex)
+}
+
+const updateBoard = function (event) {
+  event.preventDefault()
+  const data = currentPlayer
+  api.updateGame(data)
+    .then(ui.placeToken)
+    .catch(ui.spotTaken)
 }
 
 const addHandlers = () => {
