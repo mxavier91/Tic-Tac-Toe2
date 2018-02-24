@@ -14,6 +14,7 @@ const signUpFailure = function (error) {
 }
 
 const signInSuccess = function (data) {
+  debugger
   $('#message').text('Signed in Successfully')
   $('#message').css('background-color', 'blue')
   console.log(data)
