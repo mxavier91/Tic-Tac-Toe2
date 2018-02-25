@@ -29,7 +29,6 @@ const pushToken = function (event) {
   } else if (currentPlayer === 'X') {
     gameBoard[event.target.id] = 'O'
   }
-  console.log(gameBoard)
 }
 
 const winConditions = function () {

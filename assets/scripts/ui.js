@@ -54,11 +54,24 @@ const newGameCreated = function (data) {
   $('#message').text('Let\'s do this!!!!!')
   $('#message').css('background-color', 'blue')
   console.log(data)
+  store.game = data.game
+  console.log('New game data is ' + data)
+  console.log('New game ID is ' + data.id)
 }
 
 const newGameFailed = function (data) {
   $('#message').text('Hold up one sec')
   $('#message').css('background-color', 'red')
+}
+
+const updateSuccess = function (data) {
+  $('#message').text('Good move')
+  $('#message').css('background-color', 'blue')
+  console.log(data)
+}
+
+const updateFailure = function () {
+
 }
 
 module.exports = {
@@ -71,5 +84,6 @@ module.exports = {
   deleteSuccess,
   deleteFailure,
   newGameCreated,
-  newGameFailed
+  newGameFailed,
+  updateSuccess
 }
