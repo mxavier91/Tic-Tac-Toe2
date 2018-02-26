@@ -1,3 +1,8 @@
+const getFormFields = require('../../lib/get-form-fields')
+const api = require('./api')
+const ui = require('./ui')
+const authEvents = require('./events')
+
 const currentPlayerX = 'X'
 const currentPlayerO = 'O'
 let currentPlayer = currentPlayerX

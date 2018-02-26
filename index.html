@@ -14,27 +14,27 @@
     <body class="container-fluid">
 
 
-<h1>Tic-Tac-Toe</h1>
-<h3>X-O-X-O-X-O</h3>
+<h1>Hugs and Kisses</h1>
+<h3>Let's Play Tic-Tac-Toe</h3>
 
 <p id="message"></p>
 
     <form id="sign-up" class="border">
         <fieldset>
           <legend>Sign up!</legend>
-          <input type="submit" value="Sign up!">
-          <input type="text" name="credentials[email]" required placeholder="Email">
-          <input type="password" name="credentials[password]" required placeholder="Password">
-          <input type="password" name="credentials[password_conformation]" required placeholder="Confirm Password">
+          <input type="submit" value="Sign up!" id="signUpButton">
+          <input  type="text" name="credentials[email]" required id="email-field" placeholder="Email">
+          <input  type="password" name="credentials[password]" required id="password-field"  placeholder="Password">
+          <input  type="password" name="credentials[password_conformation]" required id="password-conformation-field"  placeholder="Confirm Password">
         </fieldset>
       </form>
 
       <form id="sign-in" class="border">
         <fieldset>
           <legend>Sign In Here!</legend>
-          <input type="submit" value="Sign in!">
-          <input type="text" name="credentials[email]" required placeholder="Email">
-          <input type="password" name="credentials[password]" required placeholder="Password">
+          <input id="signInField" type="submit" value="Sign in!">
+          <input type="text" name="credentials[email]" required id="signInEmail" placeholder="Email">
+          <input type="password" name="credentials[password]" required id="signInPassword" placeholder="Password">
         </fieldset>
       </form>
 
@@ -48,9 +48,9 @@
       <form id="change-password" class="border">
         <fieldset>
           <legend>Change Password</legend>
-          <input type="submit" value="Change Password">
-          <input type="password" name="passwords[old]" placeholder="Old Password">
-          <input type="password" name="passwords[new]" placeholder="New Password">
+          <input id="passwordField" type="submit" value="Change Password">
+          <input type="password" name="passwords[old]" id="oldPasswordField" placeholder="Old Password">
+          <input type="password" name="passwords[new]" id="newPasswordField" placeholder="New Password">
         </fieldset>
       </form>
 
@@ -60,15 +60,6 @@
           <input type="submit" value="New Game!">
         </fieldset>
       </form>
-
-      <form id="update-game" class="border">
-        <fieldset>
-          <legend>Update</legend>
-          <input type="submit" value="Update Game!">
-        </fieldset>
-      </form>
-
-
 
       <table id="gameboard">
         <tr>
